@@ -11,15 +11,16 @@ status: event indicator (1 for primary event, 2 for competing event, 0 for censo
 
 #### Implementation
 ##### fit_eif_cf(A, Time, status, M, X, method='riesz', event=1, monotone=TRUE)
-To compute the efficient influence function and estimate counterfactual CIF<br>
+To compute the efficient influence function and estimate counterfactual CIF; the mediator density ratio is estimated by Riesz regression<br>
+The main output consists of the following:<br>
 time: time points when the counterfactual CIF is evaluated<br>
 F_reg: regression (plug-in) estimate of counterfactual CIF<br>
 F_eff: efficient influence function (EIF)-based estimate of counterfactual CIF<br>
 se_eff: pointwise standard error of the estimated EIF-based estimate of counterfactual CIF
 ##### est_decompose(fit)
-To decompose the total effect into mediation, direct, and indirect effects
+To decompose the total effect into mediation, direct, and indirect effects; the input is an object from fit_eif_cf
 ##### est_con(fit, a=0, m_seq=NULL, h2=NULL, time=NULL, h=0.5, monotone=TRUE)
-To estimate the controlled counterfactual CIFs, setting the mediator at m_seq and the competing event cumulative hazard at h2
+To estimate the kernel-smoothed controlled counterfactual CIFs, setting the mediator at m_seq and the competing event cumulative hazard at h2; the bandwidth of the kernel that smooths the countrolled CIF is h
 
 ### Files
 ##### main.R
