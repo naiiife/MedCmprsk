@@ -27,3 +27,5 @@ To estimate the kernel-smoothed controlled counterfactual CIFs, setting the medi
 Main functions
 ##### simulation.R
 Code for a single run of simulation
+##### result.R
+Code for summarizing parallel replicates
