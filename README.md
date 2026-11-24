@@ -20,12 +20,20 @@ se_eff: pointwise standard error of the estimated EIF-based estimate of counterf
 ##### est_decompose(fit)
 To decompose the total effect into mediation, direct, and indirect effects; the input is an object from fit_eif_cf
 ##### est_con(fit, a=0, m_seq=NULL, h2=NULL, time=NULL, h=0.5, monotone=TRUE)
-To estimate the kernel-smoothed controlled counterfactual CIFs, setting the mediator at m_seq and the competing event cumulative hazard at h2; the bandwidth of the kernel that smooths the countrolled CIF is h
+To estimate the kernel-smoothed controlled counterfactual CIFs, setting the mediator at m_seq and the competing event cumulative hazard at h2; the bandwidth of the kernel that smooths the controlled CIF is h
 
 ### Files
+#### Simulation
 ##### main.R
 Main functions
 ##### simulation.R
 Code for a single run of simulation
 ##### result.R
 Code for summarizing parallel replicates
+#### Applications (COV2008; AMP)
+##### app1_sens_boot.R
+Sensitivity analysis for the COV2008 data
+##### app2_build_pt80.R
+To generate predicted ID80 in the AMP dataset
+##### application_analysis.R
+Main code for two applications (COV2008, AMP)
